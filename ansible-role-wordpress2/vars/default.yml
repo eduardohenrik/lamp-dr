@@ -4,10 +4,10 @@ php_modules: [ 'php', 'php-curl', 'php-gd', 'php-mbstring', 'php-xml', 'php-xmlr
 #MySQL Settings
 mysql_root_password: "your-root-password"
 mysql_db: "wpdb"
-mysql_user: "wpuser"
-mysql_password: "password"
+mysql_user: "wordpress"
+mysql_password: "P@ssw0rd"
  
 #HTTP Settings
-http_host: "wp.example.com"
-http_conf: "wp.example.com.conf"
+http_host: "bastion.v98rk.sandbox1900.opentlc.com"
+http_conf: "bastion.v98rk.sandbox1900.opentlc.com.conf"
 http_port: "80"
