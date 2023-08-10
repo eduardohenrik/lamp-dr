@@ -17,12 +17,5 @@
     permanent: true
     state: enabled
     immediate: yes
-    
-- name: Disable SELinux Permanently (Reboot Required)
-  selinux: state=disabled
- 
-- name: Disable SELinux Without Reboot
-  command: /sbin/setenforce 0
- 
 
 
