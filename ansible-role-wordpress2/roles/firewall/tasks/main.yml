@@ -1,12 +1,28 @@
 # Firewall Configuration
-    - name: Disable SELinux Permanently (Reboot Required)
-      selinux: state=disabled
+
+- name: latest firewalld version installed
+  yum:
+    name: firewalld
+    state: latest
+
+- name: firewalld enabled and running
+  service:
+    name: firewalld
+    enabled: true
+    state: started
+
+- name: firewalld permits http service
+  firewalld:
+    service: http
+    permanent: true
+    state: enabled
+    immediate: yes
+    
+- name: Disable SELinux Permanently (Reboot Required)
+  selinux: state=disabled
  
-    - name: Disable SELinux Without Reboot
-      command: /sbin/setenforce 0
+- name: Disable SELinux Without Reboot
+  command: /sbin/setenforce 0
  
-    - name: Configure Firewall
-      firewalld: zone=public service=http permanent=yes state=enabled
- 
-    - name: Reload Firewall
-      systemd: name=firewalld state=reloaded
+
+
