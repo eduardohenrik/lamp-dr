@@ -3,11 +3,11 @@
 
 mariadb_databases: []
 mariadb_users: []
-mariadb_root_password: ''
+mariadb_root_password: 'REPLACEME'
 mariadb_auth_unix_plugin: false
 
 mariadb_mirror: mirror.mariadb.org
-mariadb_version: '10.6'
+mariadb_version: '10.10'
 
 mariadb_configure_swappiness: true
 mariadb_swappiness: "0"
