@@ -16,7 +16,7 @@
         state: present
  
     - name: Creates database for WordPress
-      mysql_db:
+      community.mysql.mysql_db:
         name: "{{ mysql_db }}"
         state: present
         login_user: root
