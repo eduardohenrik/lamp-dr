@@ -1,0 +1,6 @@
+---
+- name: Deploy Wordpress for DR demo
+  hosts: web
+
+  roles:
+    - ansible-role-wordpress

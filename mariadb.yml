@@ -1,0 +1,6 @@
+---
+- name: Deploy MariaDB Database for DR demo
+  hosts: web
+
+  roles:
+    - ansible-role-mariadb
