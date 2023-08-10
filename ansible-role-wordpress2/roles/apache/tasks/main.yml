@@ -1,8 +1,14 @@
-- name: Install HTTP Packages
-  yum: name=httpd update_cache=yes state=latest
+- name: latest Apache version installed
+  yum:
+    name: httpd
+    state: latest
+  notify: apache-restart
  
-- name: Start httpd service
-  systemd: name=httpd state=started enabled=yes
+- name: Apache enabled and running
+  service:
+    name: httpd
+    enabled: true
+    state: started
  
 - name: Create Apache Document Root
   file:
