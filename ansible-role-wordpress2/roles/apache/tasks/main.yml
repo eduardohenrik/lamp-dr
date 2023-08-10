@@ -2,7 +2,6 @@
   yum:
     name: httpd
     state: latest
-  notify: apache-restart
  
 - name: Apache enabled and running
   service:
